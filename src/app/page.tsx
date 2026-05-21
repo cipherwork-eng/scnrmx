@@ -35,6 +35,8 @@ const ACCENT: Record<string, { bg: string; text: string; border: string }> = {
   amber:   { bg: "bg-amber-500/10",   text: "text-amber-400",   border: "border-amber-500/20" },
   rose:    { bg: "bg-rose-500/10",    text: "text-rose-400",    border: "border-rose-500/20" },
   violet:  { bg: "bg-violet-500/10",  text: "text-violet-400",  border: "border-violet-500/20" },
+  sky:     { bg: "bg-sky-500/10",     text: "text-sky-400",     border: "border-sky-500/20" },
+  indigo:  { bg: "bg-indigo-500/10",  text: "text-indigo-400",  border: "border-indigo-500/20" },
 };
 
 /* ------------------------------------------------------------------ */
@@ -90,6 +92,20 @@ const FEATURES = [
     icon: Gift,
     href: "/airdrops",
     accent: "violet",
+  },
+  {
+    title: "Contract Audit",
+    desc: "AI-powered smart contract security audit. Detect honeypots, proxy risks, and rug-pull patterns.",
+    icon: Shield,
+    href: "/audit",
+    accent: "sky",
+  },
+  {
+    title: "Market Sentiment",
+    desc: "AI-analyzed market sentiment with Fear & Greed index, social signals, and deep token analysis.",
+    icon: BrainCircuit,
+    href: "/sentiment",
+    accent: "indigo",
   },
 ];
 
