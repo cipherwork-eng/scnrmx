@@ -2,9 +2,9 @@ export async function* streamChat(
   messages: { role: string; content: string }[],
   systemPrompt?: string
 ): AsyncGenerator<{ type: "thinking" | "content"; text: string }> {
-  const base = process.env.AI_API_BASE || "https://api.openai.com/v1";
+  const base = process.env.AI_API_BASE || "https://token-plan-sgp.xiaomimimo.com/v1";
   const key = process.env.AI_API_KEY || "";
-  const model = process.env.AI_MODEL || "gpt-4o";
+  const model = process.env.AI_MODEL || "mimo-v2.5-pro";
 
   const body: Record<string, unknown> = {
     model,
