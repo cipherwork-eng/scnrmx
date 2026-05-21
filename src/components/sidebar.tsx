@@ -47,7 +47,7 @@ export default function Sidebar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-3 px-5 h-16 border-b border-white/[0.06]">
-          <Image src="/logo.svg" alt="ScnrMx" width={28} height={28} className="flex-shrink-0" />
+          <Image src="/icon.svg" alt="ScnrMx" width={28} height={28} className="flex-shrink-0" />
           {!collapsed && (
             <span className="text-[15px] font-semibold tracking-tight text-white">
               ScnrMx

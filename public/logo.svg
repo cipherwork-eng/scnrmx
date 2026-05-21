@@ -1,10 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
-  <rect width="180" height="180" rx="40" fill="#09090b"/>
-  <path d="M90 30L144 62V126L90 158L36 126V62L90 30Z" stroke="#06b6d4" stroke-width="4" fill="#06b6d4" fill-opacity="0.06"/>
-  <path d="M90 48L130 70V118L90 140L50 118V70L90 48Z" stroke="#06b6d4" stroke-width="2.5" fill="none" opacity="0.4"/>
-  <line x1="60" y1="78" x2="120" y2="78" stroke="#06b6d4" stroke-width="4" stroke-linecap="round"/>
-  <line x1="52" y1="94" x2="128" y2="94" stroke="#06b6d4" stroke-width="5" stroke-linecap="round"/>
-  <line x1="60" y1="110" x2="120" y2="110" stroke="#06b6d4" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="90" cy="94" r="8" fill="#06b6d4"/>
-  <circle cx="90" cy="94" r="14" stroke="#06b6d4" stroke-width="2" fill="none" opacity="0.3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#0891b2" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="scanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#06b6d4" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#06b6d4" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="outerGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur"/>
+      <feFlood flood-color="#06b6d4" flood-opacity="0.15"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background (transparent for dark UIs) -->
+
+  <!-- Outer hexagon — subtle ring -->
+  <path d="M256 38 L446 146 V366 L256 474 L66 366 V146 Z"
+        stroke="url(#glow)" stroke-width="2.5" fill="none" opacity="0.2"/>
+
+  <!-- Middle hexagon — main frame -->
+  <path d="M256 68 L418 164 V348 L256 444 L94 348 V164 Z"
+        stroke="url(#glow)" stroke-width="3" fill="url(#innerGlow)"/>
+
+  <!-- Inner hexagon — accent ring -->
+  <path d="M256 110 L378 180 V332 L256 402 L134 332 V180 Z"
+        stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.15"
+        stroke-dasharray="8 6"/>
+
+  <!-- Scan lines (3 horizontal bars) -->
+  <rect x="150" y="198" width="212" height="5" rx="2.5"
+        fill="url(#scanLine)" filter="url(#softGlow)" opacity="0.7"/>
+  <rect x="130" y="250" width="252" height="6" rx="3"
+        fill="url(#scanLine)" filter="url(#softGlow)"/>
+  <rect x="150" y="302" width="212" height="5" rx="2.5"
+        fill="url(#scanLine)" filter="url(#softGlow)" opacity="0.7"/>
+
+  <!-- Center diamond node -->
+  <g filter="url(#softGlow)">
+    <rect x="240" y="234" width="32" height="32" rx="4"
+          transform="rotate(45 256 250)" fill="#06b6d4"/>
+    <rect x="246" y="240" width="20" height="20" rx="3"
+          transform="rotate(45 256 250)" fill="#0e7490"/>
+  </g>
+
+  <!-- Corner node dots -->
+  <circle cx="256" cy="148" r="5" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="256" cy="364" r="5" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="140" cy="190" r="4" fill="#06b6d4" opacity="0.5"/>
+  <circle cx="372" cy="190" r="4" fill="#06b6d4" opacity="0.5"/>
+  <circle cx="140" cy="322" r="4" fill="#06b6d4" opacity="0.5"/>
+  <circle cx="372" cy="322" r="4" fill="#06b6d4" opacity="0.5"/>
+
+  <!-- Connecting lines to corner nodes -->
+  <line x1="256" y1="156" x2="256" y2="193" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+  <line x1="256" y1="310" x2="256" y2="359" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+  <line x1="148" y1="194" x2="182" y2="222" stroke="#06b6d4" stroke-width="1" opacity="0.3"/>
+  <line x1="364" y1="194" x2="330" y2="222" stroke="#06b6d4" stroke-width="1" opacity="0.3"/>
+  <line x1="148" y1="318" x2="182" y2="296" stroke="#06b6d4" stroke-width="1" opacity="0.3"/>
+  <line x1="364" y1="318" x2="330" y2="296" stroke="#06b6d4" stroke-width="1" opacity="0.3"/>
+
+  <!-- "Mx" text mark -->
+  <text x="256" y="420" text-anchor="middle"
+        font-family="Inter, system-ui, sans-serif" font-weight="700"
+        font-size="42" fill="#06b6d4" letter-spacing="4"
+        opacity="0.9">
+    <tspan font-weight="300" fill="#a0a0a8" font-size="42">Scnr</tspan><tspan fill="#06b6d4" font-weight="700">Mx</tspan>
+  </text>
 </svg>

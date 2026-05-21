@@ -1,7 +1,9 @@
 "use client";
 
+
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MessageSquare,
   LayoutDashboard,
@@ -237,7 +239,7 @@ export default function Home() {
 
         <div className="relative mx-auto flex max-w-5xl flex-col items-center px-6 pb-24 pt-32 text-center">
           <div className="animate-fade-in mb-6 inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-[#111113] px-4 py-1.5 text-xs text-[#a0a0a8]">
-            <Hexagon className="h-3.5 w-3.5 text-cyan-400" />
+            <Image src="/icon.svg" alt="" width={14} height={14} />
             Blockchain Intelligence Platform
           </div>
 
@@ -330,7 +332,7 @@ export default function Home() {
               Everything you need to navigate on-chain
             </h2>
             <p className="animate-fade-in stagger-2 mx-auto mt-4 max-w-xl text-[#a0a0a8]">
-              Seven integrated modules covering every aspect of blockchain intelligence,
+              Nine integrated modules covering every aspect of blockchain intelligence,
               from AI conversations to portfolio management.
             </p>
           </div>
@@ -419,7 +421,7 @@ export default function Home() {
       <footer className="border-t border-white/[0.06] bg-[#09090b]">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
           <div className="flex items-center gap-2 text-sm text-[#606068]">
-            <Hexagon className="h-4 w-4 text-cyan-400" />
+            <Image src="/icon.svg" alt="ScnrMx" width={16} height={16} />
             ScnrMx
           </div>
           <p className="text-xs text-[#606068]">Built by CipherWork</p>
