@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   MessageSquare,
@@ -46,9 +47,7 @@ export default function Sidebar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-3 px-5 h-16 border-b border-white/[0.06]">
-          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-cyan-500/10">
-            <Hexagon size={18} className="text-cyan-400" />
-          </div>
+          <Image src="/logo.svg" alt="ScnrMx" width={28} height={28} className="flex-shrink-0" />
           {!collapsed && (
             <span className="text-[15px] font-semibold tracking-tight text-white">
               ScnrMx
