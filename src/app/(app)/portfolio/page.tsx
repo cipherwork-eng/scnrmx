@@ -1,6 +1,5 @@
 "use client";
 
-import Sidebar from "@/components/sidebar";
 import PageHeader from "@/components/page-header";
 import {
   PieChart,
@@ -45,7 +44,6 @@ const ALLOC_COLORS = ["#06b6d4", "#8b5cf6", "#10b981", "#f59e0b", "#ef4444", "#3
 export default function PortfolioPage() {
   return (
     <div className="flex min-h-screen">
-      <Sidebar />
       <main className="flex-1 p-6 lg:p-8 pb-24 lg:pb-8 overflow-y-auto">
         <PageHeader
           icon={PieChart}

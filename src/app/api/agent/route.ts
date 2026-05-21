@@ -1,9 +1,10 @@
 import { NextRequest } from "next/server";
-import { streamChat } from "@/lib/mimo-client";
+import { streamChat } from "@/lib/ai-client";
 import { AGENT_SYSTEM_PROMPTS } from "@/lib/agent-prompts";
 
-export const runtime = "nodejs";
-export const maxDuration = 60;
+export const runtime = "edge";
+export const dynamic = "force-dynamic";
+
 
 export async function POST(req: NextRequest) {
   try {

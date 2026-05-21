@@ -3,7 +3,7 @@
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind">
-  <img src="https://img.shields.io/badge/AI_Agent-MiMo_Pro-8B5CF6?style=for-the-badge&logo=google&logoColor=white" alt="AI Agent">
+  <img src="https://img.shields.io/badge/AI_Agent-Advanced_Reasoning-8B5CF6?style=for-the-badge&logo=google&logoColor=white" alt="AI Agent">
 </p>
 
 <br />
@@ -174,7 +174,7 @@ Proactive airdrop intelligence:
                     |                                   |
           +---------v---------+             +-----------v-----------+
           |    AI Agent Core   |             |    Data Aggregation   |
-          |  (MiMo v2.5 Pro)  |             |       Layer           |
+          |  (Advanced Reasoning LLM)  |             |       Layer           |
           |                   |             |                       |
           |  - Intent parsing |             |  - Etherscan API      |
           |  - Query planning |             |  - Solscan API        |
@@ -213,7 +213,7 @@ Proactive airdrop intelligence:
 | **Styling** | Tailwind CSS v4 | Utility-first CSS with custom design tokens |
 | **Icons** | Lucide React | Consistent, lightweight icon system |
 | **Charts** | Recharts | Declarative charting library for React |
-| **AI Model** | MiMo v2.5 Pro | Advanced reasoning LLM for on-chain analysis |
+| **AI Model** | Advanced Reasoning LLM | Advanced reasoning LLM for on-chain analysis |
 | **Database** | PostgreSQL | Persistent storage for user data and caching |
 | **Deployment** | Vercel | Edge-optimized hosting with serverless functions |
 | **Design** | Linear-inspired dark UI | Premium, restrained aesthetic (#09090b base) |
@@ -228,7 +228,7 @@ Proactive airdrop intelligence:
 
 - **Node.js** 20.x or later
 - **npm** 10.x or later
-- **MiMo API Key** — obtain from [MiMo Open Platform](https://platform.xiaomimimo.com)
+- **AI API Key** — obtain from [AI Open Platform](https://platform.example.com)
 
 ### Installation
 
@@ -266,10 +266,10 @@ npm run start
 Create a `.env.local` file in the project root:
 
 ```env
-# AI Agent — MiMo v2.5 Pro
-MIMO_API_KEY=your-mimo-api-key
-MIMO_API_BASE=https://api.xiaomimimo.com/v1
-MIMO_MODEL=mimo-v2.5-pro
+# AI Agent — Advanced Reasoning LLM
+AI_API_KEY=your-mimo-api-key
+AI_API_BASE=https://api.openai.com/v1
+AI_MODEL=gpt-4o
 
 # Blockchain Data APIs (optional — for enhanced features)
 ETHERSCAN_API_KEY=your-etherscan-key
@@ -279,7 +279,7 @@ COINGECKO_API_KEY=your-coingecko-key
 
 See `.env.example` for the complete list.
 
-> **Note:** The AI agent works with just the MiMo API key. Blockchain data APIs enhance the experience with real-time on-chain data but are not required for the core conversational interface.
+> **Note:** The AI agent works with just the AI API key. Blockchain data APIs enhance the experience with real-time on-chain data but are not required for the core conversational interface.
 
 <br />
 
@@ -321,7 +321,7 @@ scnrmx/
 │   │   ├── whale-row.tsx           # Whale transaction row
 │   │   └── alert-card.tsx          # Alert item card
 │   ├── lib/
-│   │   ├── mimo-client.ts          # Streaming AI API client
+│   │   ├── ai-client.ts          # Streaming AI API client
 │   │   ├── agent-prompts.ts        # System prompts per context
 │   │   └── format.ts               # Number/address formatting
 │   └── hooks/
@@ -451,8 +451,8 @@ npm i -g vercel
 vercel --prod
 
 # Add environment variables
-vercel env add MIMO_API_KEY production
-vercel env add MIMO_API_BASE production
+vercel env add AI_API_KEY production
+vercel env add AI_API_BASE production
 ```
 
 ### Self-Hosted
@@ -537,7 +537,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 <br />
 
 <img src="https://img.shields.io/badge/Built_by-CipherWork-8B5CF6?style=for-the-badge" alt="CipherWork">
-<img src="https://img.shields.io/badge/AI_Engine-MiMo_v2.5_Pro-06B6D4?style=for-the-badge" alt="MiMo">
+<img src="https://img.shields.io/badge/AI_Engine-AI_v2.5_Pro-06B6D4?style=for-the-badge" alt="AI">
 <img src="https://img.shields.io/badge/Chain-Ethereum_%7C_Solana_%7C_Base-10B981?style=for-the-badge" alt="Multi-chain">
 
 </div>

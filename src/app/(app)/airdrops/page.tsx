@@ -1,6 +1,5 @@
 "use client";
 
-import Sidebar from "@/components/sidebar";
 import PageHeader from "@/components/page-header";
 import {
   Gift,
@@ -100,7 +99,6 @@ const SUMMARY = {
 export default function AirdropsPage() {
   return (
     <div className="flex min-h-screen">
-      <Sidebar />
       <main className="flex-1 p-6 lg:p-8 pb-24 lg:pb-8 overflow-y-auto">
         <PageHeader
           icon={Gift}

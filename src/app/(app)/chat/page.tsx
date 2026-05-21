@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Sidebar from "@/components/sidebar";
 import {
   Send,
   Sparkles,
@@ -157,7 +156,6 @@ export default function ChatPage() {
 
   return (
     <div className="flex min-h-screen">
-      <Sidebar />
       <main className="flex-1 flex flex-col min-h-screen lg:min-h-auto pb-20 lg:pb-0">
         {/* Chat Area */}
         <div className="flex-1 overflow-y-auto">

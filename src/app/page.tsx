@@ -187,7 +187,7 @@ export default function HomePage() {
             <span>Built by CipherWork</span>
           </div>
           <div className="text-xs text-[#404048]">
-            Powered by MiMo v2.5 Pro
+            Powered by Advanced Reasoning AI
           </div>
         </footer>
       </div>

@@ -2,9 +2,9 @@ export async function* streamChat(
   messages: { role: string; content: string }[],
   systemPrompt?: string
 ): AsyncGenerator<{ type: "thinking" | "content"; text: string }> {
-  const base = process.env.MIMO_API_BASE || "https://api.xiaomimimo.com/v1";
-  const key = process.env.MIMO_API_KEY || "";
-  const model = process.env.MIMO_MODEL || "mimo-v2.5-pro";
+  const base = process.env.AI_API_BASE || "https://api.openai.com/v1";
+  const key = process.env.AI_API_KEY || "";
+  const model = process.env.AI_MODEL || "gpt-4o";
 
   const body: Record<string, unknown> = {
     model,
@@ -26,7 +26,7 @@ export async function* streamChat(
 
   if (!res.ok) {
     const errText = await res.text().catch(() => "Unknown error");
-    throw new Error(`MiMo API error ${res.status}: ${errText}`);
+    throw new Error(`AI API error ${res.status}: ${errText}`);
   }
 
   const reader = res.body?.getReader();
